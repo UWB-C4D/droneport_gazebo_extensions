@@ -1,0 +1,888 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+  <model name="droneport">
+    <static>false</static>
+    <link name="base_link">
+      <inertial>
+        <mass>15.6</mass>
+        <pose>0 0 0</pose>
+        <inertia>
+          <ixx>3.328130000000001</ixx>
+          <ixy>0.00.0</ixy>
+          <ixz>0.00.0</ixz>
+          <iyy>3.328130000000001</iyy>
+          <iyz>0.00.0</iyz>
+          <izz>6.6560000000000015</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+
+            <size>0.80 0.80 0.005</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.80 0.80 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.16 0.4 0.5 1</ambient>
+          <diffuse>0.16 0.4 0.5 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+
+    <link name="left_side">
+      <pose>0 -0.3975 0.1025 0 0 0 </pose>
+      <inertial>
+        <mass>3.84</mass>
+        <pose>0 0 0</pose>
+        <inertia>
+          <ixx>0.05123200000000001</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.8704000000000002</iyy>
+          <iyz>0.0</iyz>
+          <izz>6.400000000000001e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+
+            <size>0.79 0.005 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <contact>
+              <ode>
+                <max_vel>0</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.79 0.005 0.2</size>
+          </box>
+        </geometry>
+        <!--
+        <material>
+          <ambient>0.8 0.0 0.5 1</ambient>
+          <diffuse>0.16 0.4 0.5 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material> -->
+        <material>
+          <script>
+            <uri>model://droneport_new_2/materials/scripts/droneport_sticker.material</uri>
+            <name>DronePort2Sticker</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="front_side">
+      <pose>-0.3975 0 0.1025 0 0 0 </pose>
+      <inertial>
+        <mass>3.84</mass>
+        <pose>0 0 0</pose>
+        <inertia>
+          <ixx>0.8704000000000002</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.05123200000000001</iyy>
+          <iyz>0.0</iyz>
+          <izz>1.6384000000000003</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+
+            <size>0.005 0.80 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.005 0.80 0.2</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.16 0.4 0.5 1</ambient>
+          <diffuse>0.16 0.4 0.5 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+
+    <link name="back_side">
+      <pose>0.3975 0 0.1025 0 0 0 </pose>
+      <inertial>
+        <mass>3.84</mass>
+        <pose>0 0 0</pose>
+        <inertia>
+          <ixx>0.8704000000000002</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.05123200000000001</iyy>
+          <iyz>0.0</iyz>
+          <izz>1.6384000000000003</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+
+            <size>0.005 0.80 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.005 0.80 0.2</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.16 0.4 0.5 1</ambient>
+          <diffuse>0.16 0.4 0.5 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+
+    <link name="right_side">
+      <pose>0 0.3975 0.1025 0 0 0 </pose>
+      <inertial>
+        <mass>3.84</mass>
+        <pose>0 0 0</pose>
+        <inertia>
+          <ixx>0.05123200000000001</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.8704000000000002</iyy>
+          <iyz>0.0</iyz>
+          <izz>6.400000000000001e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.80 0.005 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.80 0.005 0.2</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.16 0.4 0.5 1</ambient>
+          <diffuse>0.16 0.4 0.5 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+
+    <link name="box_with_electronics">
+      <pose>-0.50 0 0.0725 0 0 0 </pose>
+      <inertial>
+        <mass>11.52</mass>
+        <pose>0 0 0</pose>
+        <inertia>
+          <ixx>1.4687999999999999</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.24</iyy>
+          <iyz>0.0</iyz>
+          <izz>2.7647999999999997"</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.20 0.60 0.15</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.20 0.60 0.15</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.16 0.4 0.5 1</ambient>
+          <diffuse>0.16 0.4 0.5 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+
+    <link name="cover">
+      <pose>0 0 0.2050 0 0 0 </pose>
+      <inertial>
+        <mass>15.6</mass>
+        <pose>0 0 0</pose>
+        <inertia>
+          <ixx>3.328130000000001</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>3.328130000000001</iyy>
+          <iyz>0.0</iyz>
+          <izz>6.6560000000000015</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+
+            <size>0.80 0.81 0.005</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.80 0.80 0.005</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.16 0.4 0.5 1</ambient>
+          <diffuse>0.16 0.4 0.5 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+
+    <link name="cover_back">
+      <pose> -0.4025 0 0.1925 0 0 0 </pose>
+      <inertial>
+        <mass>0.58</mass>
+        <pose>0 0 0</pose>
+        <inertia>
+          <ixx>0.1270200000000000</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.0001788333333333333</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.25369200000000003</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.005 0.81 0.03</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.005 0.81 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.5 0.8 0.5 1</ambient>
+          <diffuse>0.5 0.8 0.5 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+
+    <link name="cover_left">
+      <pose> 0 -0.4030 0.1925 0 0 0 </pose>
+      <inertial>
+        <mass>0.576</mass>
+        <pose>0 0 0</pose>
+        <inertia>
+          <ixx>0.00017759999999999995</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.12305280000000002</iyy>
+          <iyz>0.0</iyz>
+          <izz>9.6e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size> 0.80 0.005 0.03</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size> 0.80 0.005 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.5 0.8 0.5 1</ambient>
+          <diffuse>0.5 0.8 0.5 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+
+    <link name="cover_right">
+      <pose> 0 0.4030 0.1925 0 0 0 </pose>
+      <inertial>
+        <mass>0.576</mass>
+        <pose>0 0 0</pose>
+        <inertia>
+          <ixx>0.00017759999999999995</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.12305280000000002</iyy>
+          <iyz>0.0</iyz>
+          <izz>9.6e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size> 0.80 0.005 0.03</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size> 0.80 0.005 0.03</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.5 0.8 0.5 1</ambient>
+          <diffuse>0.5 0.8 0.5 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+
+    <link name="aruco_surface">
+      <pose>0.15 0.0 0.2076 0 0 0 </pose>
+      <inertial>
+        <mass>0.08</mass>
+        <pose>0 0 0</pose>
+        <inertia>
+          <ixx>0.0006000066666666667</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.0006000066666666667</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.0012000000000000001</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.0001</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="visual2">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.0001</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://droneport_new_2/materials/scripts/droneport.material</uri>
+            <name>DronePort2SmallAruco</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="aruco_surface_2">
+      <pose>-0.25 0.0 0.2076 0 0 0 </pose>
+      <inertial>
+        <mass>0.08</mass>
+        <pose>0 0 0</pose>
+        <inertia>
+          <ixx>0.0006000066666666667</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.0006000066666666667</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.0012000000000000001</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.2 0.2 0.0001</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="visual2">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <box>
+            <size>0.2 0.2 0.0001</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://droneport_new_2/materials/scripts/droneport.material</uri>
+            <name>DronePort2LargeAruco</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="battery0">
+      <pose>-0.300 -0.350 0.025 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.15 0.05 0.04</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual_battery0">
+        <geometry>
+          <box>
+            <size>0.15 0.05 0.04</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="battery1">
+      <pose>-0.300 -0.250 0.025 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.15 0.05 0.04</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual_battery1">
+        <geometry>
+          <box>
+            <size>0.15 0.05 0.04</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="battery2">
+      <pose>-0.300 -0.150 0.025 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.15 0.05 0.04</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual_battery2">
+        <geometry>
+          <box>
+            <size>0.15 0.05 0.04</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <link name="battery3">
+      <pose>-0.300 -0.050 0.025 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.15 0.05 0.04</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual_battery3">
+        <geometry>
+          <box>
+            <size>0.15 0.05 0.04</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+
+    <joint name="base_link_to_left_side" type="fixed">
+      <parent>base_link</parent>
+      <child>left_side</child>
+      <pose>0 0 0 0 0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <joint name="base_link_to_right_side" type="fixed">
+      <parent>base_link</parent>
+      <child>right_side</child>
+      <pose>0 0 0 0 0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <joint name="base_link_to_front_side" type="fixed">
+      <parent>base_link</parent>
+      <child>front_side</child>
+      <pose>0 0 0 0 0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <joint name="base_link_to_back_side" type="fixed">
+      <parent>base_link</parent>
+      <child>back_side</child>
+      <pose>0 0 0 0 0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <joint name="front_side_to_box_with_electronics" type="fixed">
+      <parent>front_side</parent>
+      <child>box_with_electronics</child>
+      <pose>0 0 0 0 0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <joint name="front_side_to_cover" type="prismatic">
+      <parent>front_side</parent>
+      <child>cover</child>
+      <pose>0 0 0 0 0 0</pose>
+      <axis>
+        <limit>
+          <effort>10000</effort>
+          <lower>-0.80</lower>
+          <upper>0.0</upper>
+        </limit>
+        <dynamics>
+          <friction>14.50</friction>
+        </dynamics>
+        <xyz>1 0 0</xyz>
+      </axis>
+    </joint>
+
+    <joint name="cover_to_cover_back" type="fixed">
+      <parent>cover</parent>
+      <child>cover_back</child>
+      <pose>0 0 0 0 0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <joint name="cover_to_cover_right" type="fixed">
+      <parent>cover</parent>
+      <child>cover_right</child>
+      <pose>0 0 0 0 0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <joint name="cover_to_cover_left" type="fixed">
+      <parent>cover</parent>
+      <child>cover_left</child>
+      <pose>0 0 0 0 0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <joint name="cover_to_aruco" type="fixed">
+      <parent>cover</parent>
+      <child>aruco_surface</child>
+      <pose>0 0 0 0 0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <joint name="cover_to_aruco_2" type="fixed">
+      <parent>cover</parent>
+      <child>aruco_surface_2</child>
+      <pose>0 0 0 0 0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <joint name="base_link_to_battery0" type="fixed">
+      <parent>base_link</parent>
+      <child>battery0</child>
+      <pose>0 0 0 0 0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <joint name="base_link_to_battery1" type="fixed">
+      <parent>base_link</parent>
+      <child>battery1</child>
+      <pose>0 0 0 0 0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <joint name="base_link_to_battery2" type="fixed">
+      <parent>base_link</parent>
+      <child>battery2</child>
+      <pose>0 0 0 0 0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <joint name="base_link_to_battery3" type="fixed">
+      <parent>base_link</parent>
+      <child>battery3</child>
+      <pose>0 0 0 0 0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+    <plugin name='droneport_plugin' filename='libgazebo_droneport_plugin.so'>
+      <robotNamespace />
+      <mavlink_addr>INADDR_ANY</mavlink_addr>
+      <mavlink_tcp_port>4562</mavlink_tcp_port>
+      <mavlink_udp_port>14751</mavlink_udp_port>
+      <number_of_ports_for_batteries>4</number_of_ports_for_batteries>
+      <TgtSystemID>202</TgtSystemID>
+      <TgtComponentID>1</TgtComponentID>
+      <use_tcp>0</use_tcp>
+    </plugin>
+
+    <model name='gps0'>
+      <link name='link'>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>2.1733e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.1733e-06</iyy>
+            <iyz>0</iyz>
+            <izz>1.8e-07</izz>
+          </inertia>
+        </inertial>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.002</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Black</name>
+              <uri>__default__</uri>
+            </script>
+          </material>
+        </visual>
+        <sensor name='gps' type='gps'>
+          <pose>0 0 0 0 0 0</pose>
+          <plugin name='gps_plugin' filename='libgazebo_gps_plugin.so'>
+            <robotNamespace />
+            <gpsNoise>1</gpsNoise>
+            <gpsXYRandomWalk>2.0</gpsXYRandomWalk>
+            <gpsZRandomWalk>4.0</gpsZRandomWalk>
+            <gpsXYNoiseDensity>0.0002</gpsXYNoiseDensity>
+            <gpsZNoiseDensity>0.0004</gpsZNoiseDensity>
+            <gpsVXYNoiseDensity>0.2</gpsVXYNoiseDensity>
+            <gpsVZNoiseDensity>0.4</gpsVZNoiseDensity>
+          </plugin>
+        </sensor>
+      </link>
+    </model>
+    <joint name='gps0_joint' type='fixed'>
+      <parent>base_link</parent>
+      <child>gps0::link</child>
+    </joint>
+
+  </model>
+</sdf>

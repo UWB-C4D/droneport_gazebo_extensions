@@ -1,0 +1,16 @@
+material 14683292298599430299
+{
+  receive_shadows false
+  technique
+  {
+    lighting off
+    pass
+    {
+      texture_unit
+      {
+        texture 14683292298599430299.jpg
+        filtering bilinear
+      }
+    }
+  }
+}

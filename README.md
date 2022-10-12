@@ -1,2 +1,26 @@
-# droneport_gazebo_extensions
-WIP
+# Gazebo DronePort Extensions
+
+Gazebo DronePort Extensions (GDE) is a set of tools that enables the Gazebo simulator to simulate [1] an autonomous battery management system called Droneport [2],[3]. It is proposed and developed by the team from New Technologies for Information Society research centre at the University of West Bohemia. Using GDE, it is possible to simulate all functionalities of the DronePort device in single or multi-agent scenarios, where an agent can be either a drone or the DronePort device. It consists of several parts necessary to run the simulation. In particular, it is the DronePort model for Gazebo, the DronePort plugin for Gazebo, a set of Models used for simulation based on the PX4_SITL_Gazebo repository. Finally, scripts for running the simulation and for testing DronePort capabilities are also part of the GDE.
+
+## Prerequisites
+
+ * sudo apt install gstreamer1.0-plugins-* python3-jinja2
+ * sudo apt install build-essential cmake
+ * Install and build PX4_Autopilot (https://github.com/PX4/PX4-Autopilot) for using with Gazebo.
+
+## GDE Installation (Tested on Ubuntu 20.04 with Gazebo 11)
+
+ * Clone current version of this repository.
+  
+ > bash skript install.sh 
+
+## Usage
+
+## References
+
+'''[1]''' Severa, O., Bouček, Z., Neduchal, P., Bláha, L., Myslivec, T., & Flidr, M. (2022). Droneport: From Concept To Simulation. In System Engineering for constrained embedded systems (pp. 33-38).
+
+'''[2]''' Bouček, Z., Neduchal, P., & Flídr, M. (2021, September). DronePort: Smart Drone Battery Management System. In International Conference on Interactive Collaborative Robotics (pp. 14-26). Springer, Cham.
+
+'''[3]''' Bláha, L., Severa, O., Barták, P., Myslivec, T., Jáger, A., & Reitinger, J. (2022, August). Droneport: From Concept To Prototype. In 2022 26th International Conference on Methods and Models in Automation and Robotics (MMAR) (pp. 134-139). IEEE.
+
