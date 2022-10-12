@@ -4,15 +4,15 @@ Gazebo DronePort Extensions (GDE) is a set of tools that enables the Gazebo simu
 
 ## Prerequisites
 
- * sudo apt install gstreamer1.0-plugins-* python3-jinja2
- * sudo apt install build-essential cmake
- * Install and build PX4_Autopilot (https://github.com/PX4/PX4-Autopilot) for using with Gazebo.
+ > sudo apt install gstreamer1.0-plugins-* python3-jinja2
+ > sudo apt install build-essential cmake
+ > Install and build PX4_Autopilot (https://github.com/PX4/PX4-Autopilot) for using with Gazebo.
 
 ## GDE Installation (Tested on Ubuntu 20.04 with Gazebo 11)
 
  * Clone current version of this repository.
   
- > bash skript install.sh 
+ > bash install.sh 
 
 ## Usage
 
