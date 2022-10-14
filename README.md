@@ -48,9 +48,9 @@ To run precision landing demo, open third terminal and move to scripts/aruco_lan
 
 ## References
 
-'''[1]''' Severa, O., Bouček, Z., Neduchal, P., Bláha, L., Myslivec, T., & Flidr, M. (2022). Droneport: From Concept To Simulation. In System Engineering for constrained embedded systems (pp. 33-38).
+**[1]** Severa, O., Bouček, Z., Neduchal, P., Bláha, L., Myslivec, T., & Flidr, M. (2022). Droneport: From Concept To Simulation. In System Engineering for constrained embedded systems (pp. 33-38).
 
-'''[2]''' Bouček, Z., Neduchal, P., & Flídr, M. (2021, September). DronePort: Smart Drone Battery Management System. In International Conference on Interactive Collaborative Robotics (pp. 14-26). Springer, Cham.
+**[2]** Bouček, Z., Neduchal, P., & Flídr, M. (2021, September). DronePort: Smart Drone Battery Management System. In International Conference on Interactive Collaborative Robotics (pp. 14-26). Springer, Cham.
 
-'''[3]''' Bláha, L., Severa, O., Barták, P., Myslivec, T., Jáger, A., & Reitinger, J. (2022, August). Droneport: From Concept To Prototype. In 2022 26th International Conference on Methods and Models in Automation and Robotics (MMAR) (pp. 134-139). IEEE.
+**[3]** Bláha, L., Severa, O., Barták, P., Myslivec, T., Jáger, A., & Reitinger, J. (2022, August). Droneport: From Concept To Prototype. In 2022 26th International Conference on Methods and Models in Automation and Robotics (MMAR) (pp. 134-139). IEEE.
 
