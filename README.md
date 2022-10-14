@@ -15,8 +15,36 @@ Gazebo DronePort Extensions (GDE) is a set of tools that enables the Gazebo simu
  * Clone current version of this repository.
   
  > bash install.sh 
+ 
+ * Ensure that OpenCV for python and mavsdk for python is installed.
+
+ > pip install opencv-contrib-python
+
+ > pip install mavsdk
 
 ## Usage
+
+ To open Gazebo with loaded models open two terminals and in both move to {REPOSITORY_ROOT}/run
+
+ > cd ./run
+
+ In the firts terminal run one of the run files except run_gzclient.sh e.g.:
+
+ > ./run_gazebo_simulation.sh 
+
+ In the second terminal run 
+
+ > ./run_gzclient.sh
+
+Both files call setup_gazebo.sh. Thus, everything should be configured and it should run without problems.
+
+To run precision landing demo, open third terminal and move to scripts/aruco_landing subdirectory and run
+
+> python demo.py
+
+## Possible problems
+
+- Landing algorithm uses GST camera plugin which uses GStreamer libraries. Thus, ensure that they are installed properly.
 
 ## References
 
