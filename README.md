@@ -34,7 +34,7 @@ Gazebo DronePort Extensions (GDE) is a set of tools that enables the Gazebo simu
 
  In the second terminal run 
 
- > ./run_gzclient.sh
+ > ./run_gzclient.bash
 
 Both files call setup_gazebo.sh. Thus, everything should be configured and it should run without problems.
 
