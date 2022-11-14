@@ -13,6 +13,7 @@ Gazebo DronePort Extensions (GDE) is a set of tools that enables the Gazebo simu
 ## GDE Installation (Tested on Ubuntu 20.04 with Gazebo 11, python >= 3.8)
 
  * Clone current version of this repository.
+ > git clone https://github.com/UWB-C4D/droneport_gazebo_extensions.git ~/gazebo_simulation
   
  > bash install.sh 
  
