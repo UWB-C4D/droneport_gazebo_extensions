@@ -8,7 +8,7 @@ Gazebo DronePort Extensions (GDE) is a set of tools that enables the Gazebo simu
 
  > sudo apt install build-essential cmake
  
- > Install and build PX4_Autopilot (https://github.com/PX4/PX4-Autopilot) for using with Gazebo.
+ > Install and build PX4_Autopilot (https://docs.px4.io/main/en/simulation/gazebo.html) for using with Gazebo.
 
 ## GDE Installation (Tested on Ubuntu 20.04 with Gazebo 11, python >= 3.8)
 
