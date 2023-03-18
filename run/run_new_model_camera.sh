@@ -32,7 +32,7 @@ echo "Starting gazebo"
 
 gzserver ${SCRIPT_DIR}/../world/empty_world.world --verbose &
 sleep 5
-gz model --spawn-file=${SCRIPT_DIR}/../models/droneport_new_1/model.sdf --model-name=droneport1 -x 0.0 -y 0.0 -z 0.3 -Y 1.57
+gz model --spawn-file=${SCRIPT_DIR}/../models/droneport_new/model.sdf --model-name=droneport1 -x 0.0 -y 0.0 -z 0.3 -Y 1.57
 #sleep 2	
 #gz model --spawn-file=${SCRIPT_DIR}/../models/droneport2/model.sdf --model-name=droneport2 -x 7.2 -y 0.0 -z 0.2 -Y 1.57
 #sleep 2
