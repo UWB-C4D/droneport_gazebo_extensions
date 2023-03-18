@@ -110,6 +110,7 @@ async def run():
     print("-- Open Video Capture --")
     cap = cv2.VideoCapture("udpsrc port=5601 ! application/x-rtp, payload=96 ! rtph264depay ! h264parse ! avdec_h264 ! decodebin ! videoconvert ! video/x-raw,format=(string)BGR ! videoconvert ! appsink emit-signals=true sync=false max-buffers=8 drop=true", cv2.CAP_GSTREAMER)
 
+
     if not cap.isOpened():
         print('VideoCapture not opened')
         exit(-1)

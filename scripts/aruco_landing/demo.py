@@ -60,15 +60,18 @@ async def run():
     #mav.mav.param_set_send(src_sys, 1, b'cover', 2, 0)
     #await asyncio.sleep(5)
     print("-- Open Video Capture --")
-    cap = cv2.VideoCapture("udpsrc port=5601 ! application/x-rtp, payload=96 ! rtph264depay ! h264parse ! avdec_h264 ! decodebin ! videoconvert ! video/x-raw,format=(string)BGR ! videoconvert ! appsink emit-signals=true sync=false max-buffers=8 drop=true", cv2.CAP_GSTREAMER)
+    cap = cv2.VideoCapture("udpsrc port=5601 ! application/x-rtp, payload=96 ! rtph264depay ! h264parse ! avdec_h264 ! decodebin ! videoconvert ! video/x-raw,format=(string)BGR ! videoconvert ! appsink emit-signals=true sync=false max-buffers=16 drop=false", cv2.CAP_GSTREAMER)
+
+    #cap = cv2.VideoCapture("udpsrc port=5601 ! application/x-rtp, payload=96 ! rtph264depay ! h264parse ! avdec_h264 ! decodebin ! videoconvert ! video/x-raw,format=(string)BGR ! videoconvert ! appsink emit-signals=true sync=false max-buffers=8 drop=true", cv2.CAP_GSTREAMER)
     #cap = cv2.VideoCapture("udpsrc port=5601 ! application/x-rtp, media=(string)video, clock-rate=(int)90000, encoding-name=(string)H264 ! rtph264depay ! avdec_h264 ! videoconvert ! autovideosink fps-update-interval=1000 appsink emit-signals=true sync=false", cv2.CAP_GSTREAMER)
 
     if not cap.isOpened():
         print('VideoCapture not opened')
         exit(-1)
 
-    arucoDict = cv2.aruco.Dictionary_get(cv2.aruco.DICT_4X4_50)
-    arucoParams = cv2.aruco.DetectorParameters_create()
+    # for OpenCV version 4.7.0 
+    #arucoDict = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_50)
+    #arucoParams = cv2.aruco.DetectorParameters()
 
     while True:
         ret, frame = cap.read()
