@@ -32,14 +32,14 @@ echo "Starting gazebo"
 
 gzserver ${SCRIPT_DIR}/../world/empty_world.world --verbose &
 sleep 5
-gz model --spawn-file=${SCRIPT_DIR}/../models/droneport_new_2/model.sdf --model-name=droneport1 -x 0.0 -y 0.0 -z 0.3 -Y 1.57
+gz model --spawn-file=${SCRIPT_DIR}/../models/droneport_new_1/model.sdf --model-name=droneport1 -x 0.0 -y 0.0 -z 0.3 -Y 1.57
 #sleep 2	
 #gz model --spawn-file=${SCRIPT_DIR}/../models/droneport2/model.sdf --model-name=droneport2 -x 7.2 -y 0.0 -z 0.2 -Y 1.57
 #sleep 2
 ${build_path}/bin/px4 -i 0 -d "$build_path/etc" -w "/tmp/sitl_drone_1" -s "$build_path/etc/init.d-posix/rcS" >"/tmp/out_drone1.log" 2>"/tmp/err_drone1.log" &
 sleep 2
 #sleep 2
-gz model --spawn-file=${SCRIPT_DIR}/../models/drone1_cam/model.sdf --model-name=drone1 -x 0.0 -y 0.0 -z 0.5 -Y 1.57
+gz model --spawn-file=${SCRIPT_DIR}/../models/drone1_cam/model.sdf --model-name=drone1 -x 2.0 -y 0.0 -z 0.5 -Y 1.57
 sleep 2
 #${build_path}/bin/px4 -i 1 -d "$build_path/etc" -w "/tmp/sitl_drone_2" -s "$build_path/etc/init.d-posix/rcS" >"/tmp/out_drone2.log" 2>"/tmp/err_drone2.log" &
 #sleep 2
