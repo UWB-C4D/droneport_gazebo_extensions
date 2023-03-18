@@ -6,11 +6,23 @@ Gazebo DronePort Extensions (GDE) is a set of tools that enables the Gazebo simu
 
  > sudo apt install gstreamer1.0-plugins-* python3-jinja2
 
- > sudo apt install build-essential cmake
- 
- > Install and build PX4_Autopilot (https://docs.px4.io/main/en/simulation/gazebo.html) for using with Gazebo.
+ > sudo apt install build-essential cmake libgtk2.0-dev pkg-config
+
+ > cd ~/
+
+ > git clone https://github.com/PX4/PX4-Autopilot.git --recursive
+
+ > cd ~/PX4-Autopilot/Tools/setup
+
+ > bash ubuntu.sh
+
+ > cd ~/PX4-Autopilot
+
+ > make px4_sitl gazebo
 
 ## GDE Installation (Tested on Ubuntu 20.04 with Gazebo 11, python >= 3.8)
+
+ > cd ~/
 
  * Clone current version of this repository.
  > git clone https://github.com/UWB-C4D/droneport_gazebo_extensions.git ~/gazebo_simulation
@@ -22,6 +34,29 @@ Gazebo DronePort Extensions (GDE) is a set of tools that enables the Gazebo simu
  > pip install opencv-contrib-python
 
  > pip install mavsdk
+
+## Aruco Landing demo prerequisities (tested for opencv 4.7.0)
+
+ * OpenCV has to be builded from source to have gstreamer support.
+ * https://discuss.bluerobotics.com/t/opencv-python-with-gstreamer-backend/8842
+
+ > cd ~/
+
+ > sudo apt install libgtk2.0-dev pkg-config
+
+ > git clone --recursive https://github.com/skvark/opencv-python.git
+
+ > cd ~/opencv-python
+
+ > export CMAKE_ARGS="-DWITH_GSTREAMER=ON"
+
+ > export ENABLE_CONTRIB=1
+
+ > pip3 install --upgrade pip wheel
+
+ > pip3 wheel . --verbose
+
+ > pip install opencv_contrib_python*.whl
 
 ## Usage
 
