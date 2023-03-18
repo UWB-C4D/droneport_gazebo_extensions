@@ -12,8 +12,12 @@ class Landing:
 
     def process_frame(self, frame):
         # Assumption -- only one aruco is in the frame.
-        arucoDict = cv2.aruco.Dictionary_get(cv2.aruco.DICT_4X4_50)
-        arucoParams = cv2.aruco.DetectorParameters_create()    
+        #arucoDict = cv2.aruco.Dictionary_get(cv2.aruco.DICT_4X4_50)
+        #arucoParams = cv2.aruco.DetectorParameters_create()   
+
+        # for OpenCV version 4.7.0 
+        arucoDict = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_50)
+        arucoParams = cv2.aruco.DetectorParameters()
 
         (detected_corners, ids, rejected) = cv2.aruco.detectMarkers(frame, arucoDict, parameters=arucoParams) 
         #print(corners, ids, rejected)
